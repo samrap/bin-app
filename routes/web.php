@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('/items');
+    return redirect('/bin');
 });
 
-Route::get('/bin', 'ItemController@index');
-Route::get('/bin/{id}', 'ItemController@show');
+Route::get('/bin', 'ItemController@index')->name('items.index');
+Route::get('/bin/{id}', 'ItemController@show')->name('items.show');
 Route::post('/bin/item/{id}/claim', 'ItemController@claim');
 Route::get('/bin/item/{id}/claim-successful', function ($id) {
     $item = \App\Item::findOrFail($id);

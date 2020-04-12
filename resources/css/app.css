@@ -60,3 +60,10 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+ .container {
+     @apply mx-auto;
+     @apply py-4;
+     @apply px-4;
+     @apply max-w-xl;
+ }
