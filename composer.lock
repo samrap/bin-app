@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8baab081153b85a2c4eb1f170c185b25",
+    "content-hash": "b8e0438dc33c83aef44a4f72865c828a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1264,6 +1264,56 @@
                 "php"
             ],
             "time": "2020-04-10T16:34:50+00:00"
+        },
+        {
+            "name": "nothingworks/blade-svg",
+            "version": "v0.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adamwathan/blade-svg.git",
+                "reference": "600269d60efe52bf9fc2cc610b21744cd69425df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adamwathan/blade-svg/zipball/600269d60efe52bf9fc2cc610b21744cd69425df",
+                "reference": "600269d60efe52bf9fc2cc610b21744cd69425df",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^5.3|^6.0|^7.0",
+                "illuminate/support": "^5.3|^6.0|^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeSvg\\BladeSvgServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BladeSvg\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "time": "2020-03-03T13:55:12+00:00"
         },
         {
             "name": "opis/closure",
@@ -3415,6 +3465,54 @@
                 "php"
             ],
             "time": "2020-03-13T01:23:26+00:00"
+        },
+        {
+            "name": "zondicons/blade-bridge",
+            "version": "v0.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dukestreetstudio/zondicons-blade-bridge.git",
+                "reference": "cfd4faa1bb82ae77955794ba92c8f7f785efe9b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dukestreetstudio/zondicons-blade-bridge/zipball/cfd4faa1bb82ae77955794ba92c8f7f785efe9b2",
+                "reference": "cfd4faa1bb82ae77955794ba92c8f7f785efe9b2",
+                "shasum": ""
+            },
+            "require": {
+                "nothingworks/blade-svg": "^0.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Zondicons\\ZondiconsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zondicons\\": "src/"
+                },
+                "files": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Schoger",
+                    "email": "sm.schoger@gmail.com"
+                },
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "description": "Easily integrate the Zondicons icon set into your Laravel applications.",
+            "time": "2020-03-20T09:27:13+00:00"
         }
     ],
     "packages-dev": [

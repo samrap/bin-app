@@ -14,16 +14,18 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-100 antialiased leading-none">
-    <div class="py-6 px-4 font-bold text-xl text-center text-white uppercase bg-black">
-        {{ config('app.name', 'Bin') }}
-    </div>
+    {{ svg_spritesheet() }}
+
+    <header class="py-6 px-4 font-bold text-xl text-center uppercase border-b">
+        <a href="/">@icon('box', 'w-6 h-6 fill-current text-gray-600')</a>
+    </header>
 
     <div class="container">
         @yield('content')
     </div>
 
-    <footer class="mt-6 py-6 bg-black text-white text-center">
-        populated by <a href="https://instagram.com/samrapaport" target="_blank">&#64;samrapaport</a>
+    <footer class="mt-6 py-6 bg-black font-bold text-xs text-gray-200 text-center uppercase">
+        built &amp; stocked by <a href="https://instagram.com/samrapaport" target="_blank">&#64;samrapaport</a>
     </footer>
 </body>
 </html>

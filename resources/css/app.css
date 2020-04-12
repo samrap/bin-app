@@ -61,9 +61,13 @@
  * @import "utilities/skew-transforms";
  */
 
- .container {
-     @apply mx-auto;
-     @apply py-4;
-     @apply px-4;
-     @apply max-w-xl;
- }
+.container {
+    @apply mx-auto;
+    @apply py-4;
+    @apply px-4;
+    @apply max-w-xl;
+}
+
+.zondicon {
+    @apply inline;
+}

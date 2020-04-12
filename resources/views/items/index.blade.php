@@ -4,11 +4,20 @@
 
 @section('content')
 
-<div class="mt-4">
+<section class="mt-4">
     @forelse ($items as $item)
         <div class="py-4 leading-normal">
             <a href="{{ route('items.show', ['id' => $item->id]) }}">
-                <div class="w-full h-40 bg-gray-300"></div>
+                <div class="w-full min-h-40 text-center bg-gray-300">
+                    @if ($featured_image_url = $item->featuredImageUrl())
+                        <img src="{{ $featured_image_url }}" class="block mx-auto" alt="">
+                    @else
+                        <div class="py-6">
+                            @icon('photo', 'block mx-auto fill-current text-gray-600')
+                            <p class="text-sm text-gray-700">No image available</span>
+                        </div>
+                    @endif
+                </div>
             </a>
             <div class="flex justify-between py-4">
                 <div class="max-w-xs">
@@ -29,6 +38,8 @@
     @empty
         <p>No items available</p>
     @endforelse
-</div>
+
+    <a href="#" class="block mt-6 py-4 text-center text-xs uppercase">Back to top @icon('arrow-thin-up', 'w-4 h-2')</a>
+</section>
 
 @endsection
