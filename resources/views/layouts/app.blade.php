@@ -17,7 +17,7 @@
     {{ svg_spritesheet() }}
 
     <header class="py-6 px-4 font-bold text-xl text-center uppercase border-b">
-        <a href="/">@icon('box', 'w-6 h-6 fill-current text-gray-600')</a>
+        <a href="/bin">@icon('box', 'w-6 h-6 fill-current text-gray-600')</a>
     </header>
 
     <div id="app" class="container">

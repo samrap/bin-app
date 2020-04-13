@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('/bin');
+    return view('home');
 });
 
 Route::get('/bin', 'ItemController@index')->name('items.index');
