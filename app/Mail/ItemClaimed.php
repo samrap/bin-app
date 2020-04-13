@@ -31,6 +31,8 @@ class ItemClaimed extends Mailable
      */
     public function build()
     {
+        $this->subject('Item Claimed - '.$this->item->name);
+
         return $this->markdown('emails.items.item_claimed');
     }
 }

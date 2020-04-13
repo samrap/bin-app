@@ -21,6 +21,10 @@ Route::get('/bin', 'ItemController@index')->name('items.index');
 Route::get('/bin/{id}', 'ItemController@show')->name('items.show');
 Route::post('/bin/item/{id}/claim', 'ItemController@claim')->name('claim-item');
 Route::get('/bin/item/{id}/claim-successful', function ($id) {
+    if (!session()->has('identity')) {
+        return redirect()->route('items.show', compact('id'));
+    }
+
     $item = \App\Item::findOrFail($id);
 
     return view('items.claim-successful', compact('item'));
