@@ -23,7 +23,9 @@
 </header>
 
 <section>
-    <p class="mt-12 leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptate eius fugit iusto culpa et ducimus suscipit dignissimos nam ex nesciunt, vitae perferendis totam molestiae! Nesciunt, ratione consectetur! Officiis, quidem!</p>
+    <p class="mt-12 leading-normal">
+        {!! $item->description !!}
+    </p>
     @forelse ($item->images as $image)
         <img src="{{ $image->url }}" class="my-4" alt="Item image">
     @empty
