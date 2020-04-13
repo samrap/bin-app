@@ -71,3 +71,15 @@
 .zondicon {
     @apply inline;
 }
+
+.transition-all-500 {
+    transition: all 500ms ease;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}

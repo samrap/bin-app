@@ -13,10 +13,13 @@
         {{ $item->name }}
     </h1>
 
-    <div>
-        <span class="text-5xl font-bold">$49</span>
-        <a href="#" class="block mt-4 w-full py-6 px-8 bg-black text-white font-bold uppercase text-center">Claim</a>
-    </div>
+    @if ($item->hasBeenClaimed())
+        <p>Unavailable -- <br />This item has already been claimed</p>
+    @else
+        <claim-item-component action="{{ route('claim-item', ['id' => $item->id]) }}">
+            @csrf
+        </claim-item-component>
+    @endif
 </header>
 
 <section>

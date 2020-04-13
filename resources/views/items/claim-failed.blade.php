@@ -2,6 +2,6 @@
 
 @section('content')
 
-Item claimed!
+The item has already been claimed
 
 @endsection

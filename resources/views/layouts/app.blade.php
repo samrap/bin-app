@@ -20,12 +20,14 @@
         <a href="/">@icon('box', 'w-6 h-6 fill-current text-gray-600')</a>
     </header>
 
-    <div class="container">
+    <div id="app" class="container">
         @yield('content')
     </div>
 
     <footer class="mt-6 py-6 bg-black font-bold text-xs text-gray-200 text-center uppercase">
         built &amp; stocked by <a href="https://instagram.com/samrapaport" target="_blank">&#64;samrapaport</a>
     </footer>
+
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
