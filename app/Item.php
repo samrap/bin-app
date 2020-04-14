@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
+    protected $casts = ['price' => 'int'];
+
     public function images()
     {
         return $this->hasMany(Image::class);

@@ -17,6 +17,7 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->unsignedDecimal('price', 8, 2);
             $table->string('claimed_by')->nullable()->default(null);
             $table->timestamps();
         });

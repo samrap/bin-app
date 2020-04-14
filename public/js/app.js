@@ -1923,11 +1923,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['action'],
+  props: ['action', 'price'],
   data: function data() {
     return {
       action: '',
+      price: 0,
       claimClicked: false
     };
   },
@@ -19549,7 +19552,7 @@ var render = function() {
         staticClass: "font-bold transition-all-500",
         class: { "text-xl": _vm.claimClicked, "text-5xl": !_vm.claimClicked }
       },
-      [_vm._v("$49")]
+      [_vm._v("\n        $" + _vm._s(_vm.price) + "\n    ")]
     ),
     _vm._v(" "),
     _vm.claimClicked

@@ -16,7 +16,7 @@
     @if ($item->hasBeenClaimed())
         <p>Unavailable -- <br />This item has already been claimed</p>
     @else
-        <claim-item-component action="{{ route('claim-item', ['id' => $item->id]) }}">
+        <claim-item-component action="{{ route('claim-item', ['id' => $item->id]) }}" price="{{ $item->price }}">
             @csrf
         </claim-item-component>
     @endif

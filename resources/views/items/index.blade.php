@@ -32,7 +32,9 @@
                     </p>
                 </div>
 
-                <div class="pl-4">$49</div>
+                <div class="pl-4">
+                    ${{ $item->price }}
+                </div>
             </div>
         </div>
     @empty

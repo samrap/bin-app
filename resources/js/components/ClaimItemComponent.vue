@@ -1,6 +1,8 @@
 <template>
     <div class="claim-item">
-        <div class="font-bold transition-all-500" v-bind:class="{ 'text-xl': claimClicked, 'text-5xl' : !claimClicked }">$49</div>
+        <div class="font-bold transition-all-500" v-bind:class="{ 'text-xl': claimClicked, 'text-5xl' : !claimClicked }">
+            ${{ price }}
+        </div>
         <p v-if="claimClicked" class="mt-4 leading-tight text-xs text-gray-700">Enter your email below and click <strong class="uppercase">Confirm</strong> to claim this item. I'll reach out to you for shipping and payment info.</p>
         <form v-bind:action="action" method="POST" class="mt-2">
             <slot></slot>
@@ -15,10 +17,11 @@
 
 <script>
     export default {
-        props: ['action'],
+        props: ['action', 'price'],
         data() {
             return {
                 action: '',
+                price: 0,
                 claimClicked: false,
             }
         },
