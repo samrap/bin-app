@@ -7,6 +7,7 @@ use App\Mail\ItemClaimed;
 use Illuminate\Http\Request;
 use App\Http\Requests\ClaimItem;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ItemClaimedNotification;
 
 class ItemController extends Controller
 {
@@ -37,6 +38,7 @@ class ItemController extends Controller
         $item->save();
 
         Mail::to($identity)->queue(new ItemClaimed($item));
+        Mail::to('me@samrapdev.com')->queue(new ItemClaimedNotification($item));
 
         return redirect()
             ->to("/bin/item/{$id}/claim-successful")

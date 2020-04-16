@@ -6,6 +6,7 @@ use App\Item;
 use Tests\TestCase;
 use App\Mail\ItemClaimed;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ItemClaimedNotification;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -60,6 +61,19 @@ class ClaimItemTest extends TestCase
 
         Mail::assertQueued(ItemClaimed::class, function ($mail) use ($item, $identity) {
             return $mail->hasTo($identity) && $mail->item->id === $item->id;
+        });
+    }
+
+    /** @test */
+    public function claiming_an_item_notifies_me()
+    {
+        $item = factory(Item::class)->create();
+        $identity = 'jackdrips@example.com';
+
+        $response = $this->post("/bin/item/{$item->id}/claim", compact('identity'));
+
+        Mail::assertQueued(ItemClaimedNotification::class, function ($mail) use ($item, $identity) {
+            return $mail->hasTo('me@samrapdev.com') && $mail->item->id === $item->id;
         });
     }
 
