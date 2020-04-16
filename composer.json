@@ -15,7 +15,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
-        "zondicons/blade-bridge": "^0.1.6"
+        "zondicons/blade-bridge": "^0.1.7"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
