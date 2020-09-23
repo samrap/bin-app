@@ -5,7 +5,7 @@
 @section('content')
 
 <a href="/bin" class="block py-4 text-xs uppercase">
-    @icon('arrow-thin-left', 'w-4 h-2') All items
+    <x-zondicon-arrow-thin-left class="w-4 h-2"/> All items
 </a>
 
 <header>
@@ -32,7 +32,7 @@
         <p class="mt-12 text-sm">No images are available for this item</p>
     @endforelse
 
-    <a href="#" class="block mt-6 py-4 text-center text-xs uppercase">Back to top @icon('arrow-thin-up', 'w-4 h-2')</a>
+    <a href="#" class="block mt-6 py-4 text-center text-xs uppercase">Back to top <x-zondicon-arrow-thin-up class="w-4 h-2"/></a>
 </section>
 
 @endsection
