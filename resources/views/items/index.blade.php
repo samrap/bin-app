@@ -12,8 +12,8 @@
                     @if ($featured_image_url = $item->featuredImageUrl())
                         <img src="{{ $featured_image_url }}" class="block mx-auto" alt="">
                     @else
-                        <div class="py-6">
-                            @icon('photo', 'block mx-auto fill-current text-gray-600')
+                        <div class="py-12">
+                            <x-zondicon-photo class="mx-auto w-12 fill-current text-gray-600"/>
                             <p class="text-sm text-gray-700">No image available</span>
                         </div>
                     @endif
@@ -41,7 +41,7 @@
         <p>No items available</p>
     @endforelse
 
-    <a href="#" class="block mt-6 py-4 text-center text-xs uppercase">Back to top @icon('arrow-thin-up', 'w-4 h-2')</a>
+    <a href="#" class="block mt-6 py-4 text-center text-xs uppercase">Back to top <x-zondicon-arrow-thin-up class="w-4 h-2"/></a>
 </section>
 
 @endsection
