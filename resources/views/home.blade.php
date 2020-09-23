@@ -24,8 +24,6 @@
     </script>
 </head>
 <body class="bg-gray-100 antialiased leading-none">
-    {{ svg_spritesheet() }}
-
     <div class="container">
         <header>
             <h1 class="mt-10 mb-6 text-xl font-bold leading-normal uppercase">
