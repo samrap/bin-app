@@ -1,9 +1,10 @@
 <?php
 
-use App\Item;
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
-class ItemSeeder extends Seeder
+class ItemImageSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +13,6 @@ class ItemSeeder extends Seeder
      */
     public function run()
     {
-        factory(Item::class, 12)->create();
+        //
     }
 }
