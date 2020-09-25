@@ -1,8 +1,11 @@
 <?php
 
+namespace Database\Seeders;
+
+use App\Item;
 use Illuminate\Database\Seeder;
 
-class ImageSeeder extends Seeder
+class ItemSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +14,6 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Item::class, 12)->create();
     }
 }
