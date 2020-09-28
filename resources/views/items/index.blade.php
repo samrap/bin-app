@@ -27,7 +27,7 @@
                         </a>
                     </h3>
 
-                    <p class="mt-2 uppercase text-xs text-gray-600">
+                    <p class="mt-2 uppercase text-xs {{ ($item->hasBeenClaimed()) ? 'text-gray-600' : 'text-green-600' }}">
                         {{ ($item->hasBeenClaimed()) ? 'Claimed' : 'Available' }}
                     </p>
                 </div>
